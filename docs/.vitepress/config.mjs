@@ -9,8 +9,15 @@ export default defineConfig({
 
   // 1. Настройка Favicon
   head: [
-    ['link', { rel: 'icon', href: '/fpva-fav.svg' }]
+    ['link', { rel: 'icon', href: '/fpva-fav.svg' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:title', content: 'FPVАвиация' }], // Может совпадать с глобальным title
+    ['meta', { property: 'og:description', content: 'Всё, что касается FPV' }], // Или с description
+    ['meta', { property: 'og:image', content: 'https://fpva.ru/fpva-preview.png' }], // <-- ВАЖНО: обязательно полная ссылка!
+    ['meta', { property: 'og:url', content: 'https://fpva.ru' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }], // Рекомендуемый тип для Twitter/X
   ],
+
 
   // --- ПЕРЕВОД МЕТОК MARKDOWN (корневой уровень) ---
   markdown: {
