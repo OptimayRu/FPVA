@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@hywax/vitepress-yandex-metrika": "^1.0.0",
     "vitepress": "^1.6.4"
   },
   "scripts": {
