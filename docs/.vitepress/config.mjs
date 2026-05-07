@@ -97,7 +97,7 @@ export default defineConfig({
 
     // --- ПОДВАЛ САЙТА ---
     footer: {
-      message: 'Подготовлено с любовью к полётам.',
+      message: 'Сделано с любовью к плавным полётам.',
       copyright: 'AlmazM © 2026'
     },
 
