@@ -23,12 +23,16 @@
     :root {
         --vp-home-hero-image-filter:blur(56px)
     }
+
 }
 
 @media (min-width: 960px) {
     :root {
         --vp-home-hero-image-filter:blur(68px)
     }
+.VPHero .text {
+  font-size: 2.7rem;
+}
 }
 
 .VPHero .VPImage {
@@ -39,10 +43,6 @@
 .custom-block {
     border-radius: 12px;
     padding: 24px;
-}
-
-.VPHero .text {
-  font-size: 41px;
 }
 
 /* docs/.vitepress/theme/custom.css */
