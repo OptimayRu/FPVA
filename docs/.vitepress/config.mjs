@@ -9,7 +9,7 @@ export default defineConfig({
 
   // 1. Настройка Favicon
   head: [
-    ['link', { rel: 'icon', href: '/fpva/fpva-fav.svg' }]
+    ['link', { rel: 'icon', href: '/fpva-fav.svg' }]
   ],
 
   // --- ПЕРЕВОД МЕТОК MARKDOWN (корневой уровень) ---
