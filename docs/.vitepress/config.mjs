@@ -3,7 +3,7 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "ru-RU",
-  title: "FPVA",
+  title: "FPVАвиация",
   description: "Всё, что касается FPV",
   base: "/",
 
@@ -118,6 +118,7 @@ export default defineConfig({
           { text: 'Соревнования и сообщество', link: '/fpv-community' },
           { text: 'Стоимость хобби', link: '/fpv-costs' },
           { text: 'Особо важное', link: '/fpv-important' },
+          { text: 'Глоссарий', link: '/fpv-glossary' }
         ]
       }
     ],
