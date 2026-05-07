@@ -106,6 +106,7 @@ export default defineConfig({
       { text: 'Главная', link: '/' },
       { text: 'База знаний', link: '/fpv-history' },
       { text: 'Глоссарий', link: '/fpv-glossary' },
+      { text: 'Об этом сайте', link: '/about' },
       { text: 'Контакты', link: '/contact' }
     ],
 
@@ -113,6 +114,7 @@ export default defineConfig({
       {
         text: 'База знаний',
         items: [
+          { text: 'Об этом сайте', link: '/about' },
           { text: 'История FPV', link: '/fpv-history' },
           { text: 'Направления FPV', link: '/fpv-directions' },
           { text: 'С чего начать', link: '/fpv-starting' },
