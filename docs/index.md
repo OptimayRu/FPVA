@@ -15,14 +15,11 @@ hero:
 
   actions:
     - theme: brand
-      text: Новичкам
-      link: /beginner
+      text: Словарь терминов
+      link: /fpv-glossary
     - theme: alt
-      text: Уверенным пилотам
-      link: /confident
-    - theme: alt
-      text: Профи
-      link: /pro
+      text: Связь с админом
+      link: /contact
 
 features:
   - icon: 🚀
