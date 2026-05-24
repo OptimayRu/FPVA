@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import taskLists from 'markdown-it-task-lists'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -6,6 +7,7 @@ export default defineConfig({
   title: "FPVАвиация",
   description: "Всё, что касается FPV",
   base: "/",
+
 
   // 1. Настройка Favicon
   head: [
@@ -21,6 +23,9 @@ export default defineConfig({
 
   // --- ПЕРЕВОД МЕТОК MARKDOWN (корневой уровень) ---
   markdown: {
+    config: (md) => {
+      md.use(taskLists) // Плагин для рендеринга чекбоксов
+    },
     container: {
       infoLabel: 'Примечание',
       tipLabel: 'Совет',
@@ -104,6 +109,7 @@ export default defineConfig({
     // --- НАВИГАЦИЯ ---
     nav: [
       { text: 'Главная', link: '/' },
+      { text: 'Чек-листы', link: '/fpv-checklist' },
       { text: 'База знаний', link: '/fpv-history' },
       { text: 'Глоссарий', link: '/fpv-glossary' },
       { text: 'Об этом сайте', link: '/about' },
@@ -114,6 +120,7 @@ export default defineConfig({
       {
         text: 'База знаний',
         items: [
+          { text: 'Чек-листы', link: '/fpv-checklist' },
           { text: 'Об этом сайте', link: '/about' },
           { text: 'История FPV', link: '/fpv-history' },
           { text: 'Направления FPV', link: '/fpv-directions' },

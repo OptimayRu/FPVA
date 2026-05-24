@@ -137,3 +137,36 @@
   .contacts-header h1 { font-size: 2rem; }
   .contact-card { min-width: 100%; }
 }
+
+/* Подсветка термина, на который перешли по ссылке */
+.term-card:target,
+.term-card.highlight {
+  background-color: #fff3cd;
+  border-left: 4px solid #f0ad4e;
+  padding: 0.1em 1rem 0.5rem !important;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+/* Тёмная тема (когда на html есть класс 'dark') */
+html.dark .term-card:target,
+html.dark .term-card.highlight {
+  background-color: #2a1e0e;  /* тёмно-оранжевый/коричневый оттенок */
+  border-left-color: #e69e3c;  /* более яркая оранжевая граница */
+  /* Можно добавить лёгкую тень для акцента */
+  box-shadow: 0 0 0 1px #e69e3c20, 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* Обычное оформление карточки термина */
+.term-card {
+  scroll-margin-top: 5rem; /* Отступ от фиксированного хедера */
+  margin: 1.5rem 0;
+}
+.term-card h4 {
+  margin-bottom: 0.1rem;
+}
+.term-card p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
