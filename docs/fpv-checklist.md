@@ -40,23 +40,14 @@ const postflightChecklist = [
 
 Чтобы каждый вылет был безопасным, а дрон служил долго, используйте эти памятки. Отмечайте выполненные пункты – и ни одна мелочь не будет забыта.
 
----
-
 ## Домашняя подготовка
-
-<InteractiveChecklist title="" :items="homeChecklist" />
-
----
+<InteractiveChecklist title="Домашняя подготовка" :items="homeChecklist" storage-key="fpv-checklist-home" />
 
 ## Предполётная подготовка
-
-<InteractiveChecklist title="" :items="preflightChecklist" />
-
----
+<InteractiveChecklist title="Предполётная подготовка" :items="preflightChecklist" storage-key="fpv-checklist-pre" />
 
 ## После полётов
-
-<InteractiveChecklist title="" :items="postflightChecklist" />
+<InteractiveChecklist title="После полётов" :items="postflightChecklist" storage-key="fpv-checklist-post" />
 
 ---
 

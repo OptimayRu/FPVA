@@ -43,6 +43,7 @@
 .custom-block {
     border-radius: 12px;
     padding: 24px;
+    margin-top: 3rem !important;
 }
 
 /* docs/.vitepress/theme/custom.css */
@@ -169,4 +170,36 @@ html.dark .term-card.highlight {
 .term-card p {
   margin-top: 0;
   margin-bottom: 0;
+}
+
+/* Interactive Checklist */
+.interactive-checklist {
+  margin: 1rem 0;
+}
+.interactive-checklist .checklist-wrapper {
+  margin-top: 1rem;
+}
+.interactive-checklist .checklist-item {
+  margin-bottom: 0.5rem;
+}
+.interactive-checklist input[type="checkbox"] {
+  margin-right: 0.5rem;
+  transform: translateY(1px);
+}
+.interactive-checklist .reset-button {
+  margin-top: 1rem;
+  padding: 0.4em 1em;
+  background: var(--vp-c-bg-soft);
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--vp-c-text-1);
+  transition: all 0.2s ease;
+}
+.interactive-checklist .reset-button:hover {
+  background: var(--vp-c-bg-mute);
+}
+.interactive-checklist h3,
+.interactive-checklist .checklist-title {
+  display: none;
 }
