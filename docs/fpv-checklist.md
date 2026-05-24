@@ -42,15 +42,21 @@ const postflightChecklist = [
 
 ---
 
-<InteractiveChecklist title="Домашняя подготовка" :items="homeChecklist" />
+## Домашняя подготовка
+
+<InteractiveChecklist title="" :items="homeChecklist" />
 
 ---
 
-<InteractiveChecklist title="Предполётная подготовка" :items="preflightChecklist" />
+## Предполётная подготовка
+
+<InteractiveChecklist title="" :items="preflightChecklist" />
 
 ---
 
-<InteractiveChecklist title="После полётов" :items="postflightChecklist" />
+## После полётов
+
+<InteractiveChecklist title="" :items="postflightChecklist" />
 
 ---
 
