@@ -49,8 +49,6 @@ const postflightChecklist = [
 ## После полётов
 <InteractiveChecklist title="После полётов" :items="postflightChecklist" storage-key="fpv-checklist-post" />
 
----
-
 ::: tip Отправляйтесь в небо подготовленными
 Чек-листы – это не формальность, а ваша страховка от глупых поломок и опасных ситуаций. Сделайте их использование привычкой.
 :::
