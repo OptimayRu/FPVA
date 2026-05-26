@@ -140,7 +140,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'telegram', link: 'https://t.me/VitePressRu' }
+      { icon: 'telegram', link: 'https://t.me/FPVaRu' }
     ]
   }
 })
