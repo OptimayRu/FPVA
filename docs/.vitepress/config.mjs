@@ -8,6 +8,11 @@ export default defineConfig({
   description: "Всё, что касается FPV",
   base: "/",
 
+  // Sitemap для SEO
+  sitemap: {
+    hostname: 'https://fpva.ru',
+  },
+
 
   // 1. Настройка Favicon
   head: [

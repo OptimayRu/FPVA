@@ -5,6 +5,7 @@ jspm_packages/
 # VitePress сборка и кеш
 **/.vitepress/dist/
 **/.vitepress/cache/
+public/
 
 # Логи
 logs
