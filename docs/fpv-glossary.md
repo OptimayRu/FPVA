@@ -178,7 +178,7 @@ description: "Словарь терминов и аббревиатур мира
 
 ## Протоколы управления и видеосвязи
 
-<div id="elrs-expresslrs" class="term-card">
+<div id="elrs" class="term-card">
 <h4>ELRS (ExpressLRS)</h4>
 <p>Открытый протокол управления с рекордной дальностью и низкой задержкой, де-факто стандарт в FPV.</p>
 </div>

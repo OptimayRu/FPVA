@@ -159,7 +159,7 @@ html.dark .term-card.highlight {
   margin-bottom: 0;
 }
 
-/* Interactive Checklist */
+/* Интерактивыный чеклист */
 .interactive-checklist {
   margin: 1rem 0;
 }
@@ -189,4 +189,50 @@ html.dark .term-card.highlight {
 .interactive-checklist h3,
 .interactive-checklist .checklist-title {
   display: none;
+}
+
+/* ===== ПОРЯДОК ЭЛЕМЕНТОВ В НАВБАРЕ ===== */
+/* Поиск (1) → Меню (2) → Telegram (3) → Тумблер темы (4) → Иконка настроек (5) */
+
+.VPNavBar .content-body {
+  display: flex;
+  align-items: center;
+}
+
+/* Контейнер с поиском */
+.VPNavBar .VPNavBarSearch {
+  order: 1;
+}
+
+/* Навигационное меню (ссылки) */
+.VPNavBar .VPNavBarMenu {
+  order: 2;
+}
+
+/* Пустое пространство между меню и поиском */
+.VPNavBar .spacer {
+  order: 3;
+  flex: 1 1 auto;
+}
+
+/* Соц-ссылки (Telegram) */
+.VPNavBar .VPNavBarSocialLinks {
+  order: 4;
+}
+
+/* Тумблер темы */
+.VPNavBar .VPNavBarAppearance {
+  order: 5;
+}
+
+/* Иконка настроек (наше меню) */
+.VPNavBar .VPFlyout {
+  order: 6;
+}
+
+/* Более радикальный вариант — полностью убрать отступы и задать их заново */
+.VPNavBar .nav-item + .divider,
+.VPNavBar .divider + .nav-item {
+    margin-left: 8px;
+    margin-right: 8px;
 }

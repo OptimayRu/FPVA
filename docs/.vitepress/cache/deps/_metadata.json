@@ -1,49 +1,49 @@
 {
-  "hash": "860d6c52",
-  "configHash": "20036e5b",
-  "lockfileHash": "9fedf2fb",
-  "browserHash": "129813f6",
+  "hash": "3749f5a2",
+  "configHash": "191bda13",
+  "lockfileHash": "55a33aad",
+  "browserHash": "53cc08c7",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "466e1eeb",
+      "fileHash": "2361a154",
       "needsInterop": false
     },
     "vitepress > @vue/devtools-api": {
       "src": "../../../../node_modules/@vue/devtools-api/dist/index.js",
       "file": "vitepress___@vue_devtools-api.js",
-      "fileHash": "c68be75c",
+      "fileHash": "9146b9fa",
       "needsInterop": false
     },
     "vitepress > @vueuse/core": {
       "src": "../../../../node_modules/@vueuse/core/index.mjs",
       "file": "vitepress___@vueuse_core.js",
-      "fileHash": "2aa1b293",
+      "fileHash": "0ee9d45e",
       "needsInterop": false
     },
     "vitepress > @vueuse/integrations/useFocusTrap": {
       "src": "../../../../node_modules/@vueuse/integrations/useFocusTrap.mjs",
       "file": "vitepress___@vueuse_integrations_useFocusTrap.js",
-      "fileHash": "007bdbba",
+      "fileHash": "6e13ce51",
       "needsInterop": false
     },
     "vitepress > mark.js/src/vanilla.js": {
       "src": "../../../../node_modules/mark.js/src/vanilla.js",
       "file": "vitepress___mark__js_src_vanilla__js.js",
-      "fileHash": "7fb8ec80",
+      "fileHash": "7769d73e",
       "needsInterop": false
     },
     "vitepress > minisearch": {
       "src": "../../../../node_modules/minisearch/dist/es/index.js",
       "file": "vitepress___minisearch.js",
-      "fileHash": "e1b62c25",
+      "fileHash": "fa36b1dc",
       "needsInterop": false
     },
     "@hywax/vitepress-yandex-metrika": {
       "src": "../../../../node_modules/@hywax/vitepress-yandex-metrika/dist/vitepress-yandex-metrika.js",
       "file": "@hywax_vitepress-yandex-metrika.js",
-      "fileHash": "b0afab8e",
+      "fileHash": "d74de892",
       "needsInterop": false
     }
   },

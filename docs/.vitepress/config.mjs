@@ -1,35 +1,45 @@
 import { defineConfig } from 'vitepress'
 import taskLists from 'markdown-it-task-lists'
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
-  lang: "ru-RU",
-  title: "FPVАвиация",
-  description: "Всё, что касается FPV",
-  base: "/",
+  vite: {
+    optimizeDeps: {
+      exclude: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities/client',
+        'vitepress',
+        '@nolebase/ui',
+      ],
+    },
+    ssr: {
+      noExternal: [
+        '@nolebase/vitepress-plugin-enhanced-readabilities',
+        '@nolebase/ui',
+      ],
+    },
+  },
 
-  // Sitemap для SEO
+  lang: 'ru-RU',
+  title: 'FPVАвиация',
+  description: 'Всё, что касается FPV',
+  base: '/',
+
   sitemap: {
     hostname: 'https://fpva.ru',
   },
 
-
-  // 1. Настройка Favicon
   head: [
     ['link', { rel: 'icon', href: '/fpva-fav.svg' }],
     ['meta', { property: 'og:type', content: 'website' }],
-    ['meta', { property: 'og:title', content: 'FPVАвиация' }], // Может совпадать с глобальным title
-    ['meta', { property: 'og:description', content: 'Всё, что касается FPV' }], // Или с description
-    ['meta', { property: 'og:image', content: 'https://fpva.ru/fpva-preview2.png' }], // <-- ВАЖНО: обязательно полная ссылка!
+    ['meta', { property: 'og:title', content: 'FPVАвиация' }],
+    ['meta', { property: 'og:description', content: 'Всё, что касается FPV' }],
+    ['meta', { property: 'og:image', content: 'https://fpva.ru/fpva-preview2.png' }],
     ['meta', { property: 'og:url', content: 'https://fpva.ru' }],
-    ['meta', { name: 'twitter:card', content: 'summary_large_image' }], // Рекомендуемый тип для Twitter/X
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ],
 
-
-  // --- ПЕРЕВОД МЕТОК MARKDOWN (корневой уровень) ---
   markdown: {
     config: (md) => {
-      md.use(taskLists) // Плагин для рендеринга чекбоксов
+      md.use(taskLists)
     },
     container: {
       infoLabel: 'Примечание',
@@ -40,17 +50,13 @@ export default defineConfig({
     }
   },
 
-  // 2. Все настройки темы (объединены в один объект)
   themeConfig: {
-    // Логотип с поддержкой светлой/тёмной темы
     logo: {
       light: '/fpva-logo2.svg',
       dark: '/fpva-logo2.svg',
       alt: 'FPVA logo'
     },
-    // siteTitle: false, // при необходимости раскомментировать
 
-    // --- НАСТРОЙКИ ПОИСКА ---
     search: {
       provider: 'local',
       options: {
@@ -78,7 +84,6 @@ export default defineConfig({
       }
     },
 
-    // --- ПЕРЕВОД ИНТЕРФЕЙСА ---
     docFooter: {
       prev: 'Предыдущая страница',
       next: 'Следующая страница'
@@ -96,7 +101,6 @@ export default defineConfig({
     lightModeSwitchTitle: 'Переключить на светлую тему',
     darkModeSwitchTitle: 'Переключить на темную тему',
 
-    // --- СТРАНИЦА 404 (перевод) ---
     notFound: {
       code: '404',
       title: 'СТРАНИЦА НЕ НАЙДЕНА',
@@ -105,13 +109,11 @@ export default defineConfig({
       linkText: 'Вернуться в начало'
     },
 
-    // --- ПОДВАЛ САЙТА ---
     footer: {
       message: 'Сделано с любовью к плавным полётам.',
       copyright: 'AlmazM © 2026'
     },
 
-    // --- НАВИГАЦИЯ ---
     nav: [
       { text: 'Главная', link: '/' },
       { text: 'Чек-листы', link: '/fpv-checklist' },
