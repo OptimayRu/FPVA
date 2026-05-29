@@ -1,8 +1,4 @@
 ---
-breadcrumbs:
-  - title: База знаний
-    link: /fpv-history
-  - title: Симуляторы FPV
 title: Симуляторы FPV
 description: "Обзор лучших FPV-симуляторов для тренировок: Liftoff, VelociDrone, Uncrashed, Tryp, DRL Sim, DCL - The Game. План тренировок от висения до трюков."
 ---
