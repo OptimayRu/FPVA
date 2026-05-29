@@ -1,6 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
+description: База знаний FPV – всё об FPV-дронах в России и за рубежом: с чего начать, оборудование, симуляторы, законы, словарь терминов, полётные инструкции и чек-листы.
 
 hero:
   name: "База знаний FPV&nbsp;"
