@@ -65,6 +65,22 @@ export default {
     }
 
     onMounted(() => {
+      const style = document.createElement('style')
+      style.textContent = `.VPNolebaseEnhancedReadabilitiesMenuFlyout .button {
+                padding-left: 7px !important;
+                padding-right: 0 !important;
+              }
+              .VPSocialLinks.VPNavBarSocialLinks.social-links {
+                margin-right: 0 !important;
+              }
+              .VPSwitch.VPSwitchAppearance {
+                margin-right: 8px !important;
+              }
+              .VPNavBarMenu.menu {
+                margin-right: -4px !important;
+              }`
+      document.head.appendChild(style)
+
       highlightFromHash()
       window.addEventListener('hashchange', highlightFromHash)
       router.onAfterRouteChanged = () => {

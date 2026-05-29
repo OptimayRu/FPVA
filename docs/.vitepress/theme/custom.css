@@ -1,3 +1,18 @@
+/* Изменение цветов акцентов */
+:root {
+  --vp-c-brand-1: #33b8ff;
+  --vp-c-brand-2: #0077c2;
+  --vp-c-brand-3: #005ea3;
+  --vp-c-brand-soft: rgba(0, 144, 224, 0.14);
+}
+
+html.dark {
+  --vp-c-brand-1: #00a4ff;
+  --vp-c-brand-2: #33b5ff;
+  --vp-c-brand-3: #66c7ff;
+  --vp-c-brand-soft: rgba(0, 164, 255, 0.14);
+}
+
 /*5129*/
 :root {
     --vp-home-hero-name-color: transparent;
@@ -190,3 +205,12 @@ html.dark .term-card.highlight {
 .interactive-checklist .checklist-title {
   display: none;
 }
+
+
+/* Порядок элементов в верхней панели навигации */
+.VPNavBar .VPNavBarSearch { order: 1; }
+.VPNavBar .VPNavBarMenu { order: 2; }
+.VPNavBar .spacer { order: 3; }
+.VPNavBar .VPNavBarSocialLinks { order: 4; }
+.VPNavBar .VPNavBarAppearance { order: 5; }
+.VPNavBar .VPNolebaseEnhancedReadabilitiesMenuFlyout { order: 6; }
