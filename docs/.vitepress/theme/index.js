@@ -34,34 +34,18 @@ export default {
     const router = useRouter()
 
     const highlightFromHash = () => {
-      console.log('[DEBUG] highlightFromHash вызвана')
       const hash = window.location.hash.slice(1)
-      console.log('[DEBUG] hash:', hash)
-      if (!hash) {
-        console.log('[DEBUG] hash пустой, выход')
-        return
-      }
+      if (!hash) return
       const target = document.getElementById(hash)
-      console.log('[DEBUG] target найден:', !!target)
-      if (target) console.log('[DEBUG] классы target:', target.classList.toString())
-      if (!target || !target.classList.contains('term-card')) {
-        console.log('[DEBUG] target не подходит (нет term-card)')
-        return
-      }
-      console.log('[DEBUG] начинаем подсветку')
+      if (!target || !target.classList.contains('term-card')) return
       document.querySelectorAll('.term-card.highlight').forEach(el => {
         el.classList.remove('highlight')
       })
       target.classList.add('highlight')
-      console.log('[DEBUG] класс highlight добавлен')
-      setTimeout(() => {
-        target.classList.remove('highlight')
-        console.log('[DEBUG] класс highlight удалён через 2с')
-      }, 2000)
+      setTimeout(() => target.classList.remove('highlight'), 2000)
       const offset = 80
       const y = target.getBoundingClientRect().top + window.scrollY - offset
       window.scrollTo({ top: y, behavior: 'smooth' })
-      console.log('[DEBUG] прокрутка выполнена')
     }
 
     onMounted(() => {
