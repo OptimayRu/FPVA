@@ -157,6 +157,16 @@ export default {
 
       initTiltEffect()
 
+      // Наблюдаем за появлением поиска и меняем placeholder
+      const searchObserver = new MutationObserver(() => {
+        const searchInput = document.querySelector('.VPLocalSearchBox input')
+        if (searchInput && searchInput.placeholder === 'Поиск') {
+          const isMobile = window.innerWidth < 768
+          searchInput.placeholder = isMobile ? 'Введите слово и пробел…' : 'Начните вводить…'
+        }
+      })
+      searchObserver.observe(document.body, { childList: true, subtree: true })
+
       highlightFromHash()
       window.addEventListener('hashchange', highlightFromHash)
       router.onAfterRouteChanged = () => {
