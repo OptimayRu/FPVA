@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /contact
+Crawl-delay: 5
+
+# Особые настройки для Яндекса
+User-agent: Yandex
+Disallow: /404.html
+Host: https://fpva.ru
+
+Sitemap: https://fpva.ru/sitemap.xml
