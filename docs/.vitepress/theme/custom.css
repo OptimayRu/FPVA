@@ -11,6 +11,10 @@ html.dark {
   --vp-c-brand-2: #33b5ff;
   --vp-c-brand-3: #66c7ff;
   --vp-c-brand-soft: rgba(0, 164, 255, 0.14);
+  --vp-c-bg: #151519;
+  --vp-c-bg-alt: #101012;
+  --vp-c-bg-elv: #18181a;
+  --vp-c-bg-soft: #18181a;
 }
 
 /*5129*/
@@ -214,3 +218,37 @@ html.dark .term-card.highlight {
 .VPNavBar .VPNavBarSocialLinks { order: 4; }
 .VPNavBar .VPNavBarAppearance { order: 5; }
 .VPNavBar .VPNolebaseEnhancedReadabilitiesMenuFlyout { order: 6; }
+
+/* Эмодзи-иконки на карточках главной страницы */
+.VPFeature {
+  position: relative;
+}
+
+.VPFeature .icon {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #ffffff;
+  font-size: 1.3rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+html.dark .VPFeature {
+  background: rgba(255, 255, 255, 0.019);
+  backdrop-filter: blur(2px);
+}
+
+html.dark .VPFeature .icon {
+  background: #2a2a2a;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.VPFeature .icon:hover {
+  background: var(--vp-c-bg-mute);
+}
