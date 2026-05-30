@@ -29,8 +29,8 @@ export default {
   },
   Layout() {
     const { page } = useData()
-    const allowedPages = ['index.md', 'contact.md', '404.md']
-    const isHome = allowedPages.includes(page.value.relativePath)
+    const allowedPages = ['index.md', 'contact.md']
+    const isHome = allowedPages.includes(page.value.relativePath) || page.value.isNotFound
 
     return h(DefaultTheme.Layout, null, {
       'layout-top': () => isHome ? h(ParticlesBg) : null,
