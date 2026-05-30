@@ -268,3 +268,18 @@ html.dark .VPFeature .icon {
     filter: blur(50px);
   }
 }
+
+/* Уменьшаем заголовки: h1(-5pt), h2(-4pt), h3(-3pt), h4(-2pt), h5(-1pt), h6(0pt) с line-height */
+.content h1 { font-size: calc(2.2rem - 5pt) !important; line-height: calc(1.3em - 2pt) !important; }
+.content h2 { font-size: calc(1.65rem - 4pt) !important; line-height: calc(1.35em - 2pt) !important; }
+.content h3 { font-size: calc(1.35rem - 3pt) !important; line-height: calc(1.4em - 2pt) !important; }
+.content h4 { font-size: calc(1.15rem - 2pt) !important; line-height: calc(1.5em - 2pt) !important; }
+.content h5 { font-size: calc(1rem - 1pt) !important; line-height: calc(1.6em - 2pt) !important; }
+.content h6 { font-size: calc(0.9rem - 0pt) !important; line-height: calc(1.6em - 2pt) !important; }
+
+/* Герой-секция на главной */
+.VPHero .text { font-size: calc(2.7rem - 5pt) !important; line-height: calc(1.3em - 2pt) !important; }
+
+/* Заголовки в контактах */
+.contacts-header h1 { font-size: calc(2.5rem - 5pt) !important; line-height: calc(1.3em - 2pt) !important; }
+.contact-card h3 { font-size: calc(1.5rem - 5pt) !important; line-height: calc(1.4em - 2pt) !important; }
