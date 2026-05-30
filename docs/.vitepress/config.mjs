@@ -34,6 +34,7 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: 'Всё, что касается FPV' }],
     ['meta', { property: 'og:image', content: 'https://fpva.ru/fpva-preview2.png' }],
     ['meta', { property: 'og:url', content: 'https://fpva.ru' }],
+    ['meta', { name: 'yandex-verification', content: '9cd8e28b3753319d' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
   ],
 

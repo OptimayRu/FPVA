@@ -29,7 +29,7 @@ export default {
   },
   Layout() {
     const { page } = useData()
-    const allowedPages = ['index.md', 'contact.md']
+    const allowedPages = ['index.md', 'contact.md', '404.md']
     const isHome = allowedPages.includes(page.value.relativePath)
 
     return h(DefaultTheme.Layout, null, {
