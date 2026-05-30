@@ -29,6 +29,8 @@ export default defineConfig({
 
   head: [
     ['link', { rel: 'icon', href: '/fpva-fav.svg' }],
+    ['link', { rel: 'preload', href: '/fpva-logo2.svg', as: 'image' }],
+    ['link', { rel: 'preconnect', href: 'https://mc.yandex.ru' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'FPVАвиация' }],
     ['meta', { property: 'og:description', content: 'Всё, что касается FPV' }],
