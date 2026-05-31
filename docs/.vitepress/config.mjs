@@ -28,13 +28,13 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/fpva-fav.svg' }],
+    ['link', { rel: 'icon', href: 'https://fpva.ru/fpva-fav.svg', type: 'image/svg+xml' }],
     ['link', { rel: 'preload', href: '/fpva-logo2.svg', as: 'image' }],
     ['link', { rel: 'preconnect', href: 'https://mc.yandex.ru' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:title', content: 'FPVАвиация' }],
     ['meta', { property: 'og:description', content: 'Всё, что касается FPV' }],
-    ['meta', { property: 'og:image', content: 'https://fpva.ru/fpva-preview2.png' }],
+    ['meta', { property: 'og:image', content: 'https://fpva.ru/fpva-preview3.png' }],
     ['meta', { property: 'og:url', content: 'https://fpva.ru' }],
     
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
@@ -121,7 +121,7 @@ export default defineConfig({
       { text: 'Главная', link: '/' },
       { text: 'Чек-листы', link: '/fpv-checklist' },
       { text: 'База знаний', link: '/fpv-history' },
-      { text: 'Глоссарий', link: '/fpv-glossary' },
+      { text: 'Словарь', link: '/fpv-glossary' },
       { text: 'Об этом сайте', link: '/about' },
       { text: 'Контакты', link: '/contact' }
     ],
@@ -144,7 +144,7 @@ export default defineConfig({
           { text: 'Соревнования и сообщество', link: '/fpv-community' },
           { text: 'Стоимость хобби', link: '/fpv-costs' },
           { text: 'Особо важное', link: '/fpv-important' },
-          { text: 'Глоссарий', link: '/fpv-glossary' }
+          { text: 'Словарь терминов', link: '/fpv-glossary' }
         ]
       }
     ],
