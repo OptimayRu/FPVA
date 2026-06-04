@@ -174,9 +174,10 @@ export default {
         const prevNext = document.querySelector('nav.prev-next');
         if (!prevNext) return;
 
-        // Проверяем при узкой ширине (500px), исправил ли VitePress эту проблему в апстриме
+        // Проверяем при узкой ширине, исправил ли VitePress эту проблему в апстриме
         const computed = getComputedStyle(prevNext);
-        const hasTwoColumns = computed.gridTemplateColumns && computed.gridTemplateColumns !== 'none' && computed.gridTemplateColumns !== 'initial';
+        const gridCols = computed.gridTemplateColumns;
+        const hasTwoColumns = gridCols && gridCols !== 'none' && gridCols !== '';
         if (hasTwoColumns && window.innerWidth < 640) {
           console.warn('PAGER_FIX: VitePress уже исправил пагинацию. Удалите блок applyPagerStyles из index.js.');
           return;
