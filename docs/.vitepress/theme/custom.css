@@ -283,3 +283,12 @@ html.dark .VPFeature .icon {
 /* Заголовки в контактах */
 .contacts-header h1 { font-size: calc(2.5rem - 5pt) !important; line-height: calc(1.3em - 2pt) !important; }
 .contact-card h3 { font-size: calc(1.5rem - 5pt) !important; line-height: calc(1.4em - 2pt) !important; }
+
+/* Перевод "Skip to content" на русский через CSS */
+.VPSkipLink.visually-hidden {
+  font-size: 0 !important;
+}
+.VPSkipLink.visually-hidden::before {
+  content: "Перейти к содержанию";
+  font-size: 14px;
+  visibility: visible;

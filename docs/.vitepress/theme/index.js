@@ -155,7 +155,7 @@ export default {
         })
       }
 
-      initTiltEffect()
+
 
       // Наблюдаем за появлением поиска и меняем placeholder
       const searchObserver = new MutationObserver(() => {
