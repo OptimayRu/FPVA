@@ -22,7 +22,8 @@ const imageRender = (tokens, idx, options, env, self) => {
         .join('')
     : ''
 
-  return `<img src="${src}" alt="${alt}"${loadingAttr}${otherAttrs}>`
+  const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, '.webp')
+  return `<img src="${webpSrc}" alt="${alt}"${loadingAttr}${otherAttrs}>`
 }
 
 export default defineConfig({
