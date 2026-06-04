@@ -1,6 +1,30 @@
 import { defineConfig } from 'vitepress'
 import taskLists from 'markdown-it-task-lists'
 
+// Кастомный рендерер для изображений с lazy loading
+const imageRender = (tokens, idx, options, env, self) => {
+  const token = tokens[idx]
+  const srcIndex = token.attrIndex('src')
+  const altIndex = token.attrIndex('alt')
+  
+  const src = srcIndex >= 0 ? token.attrs[srcIndex][1] : ''
+  const alt = altIndex >= 0 ? token.attrs[altIndex][1] : ''
+  
+  // Добавляем loading="lazy" ко всем изображениям, кроме SVG (они часто маленькие)
+  const isSvg = src.toLowerCase().endsWith('.svg')
+  const loadingAttr = isSvg ? '' : ' loading="lazy"'
+  
+  // Сохраняем остальные атрибуты (если есть)
+  const otherAttrs = token.attrs
+    ? token.attrs
+        .filter((_, i) => i !== srcIndex && i !== altIndex)
+        .map(([key, val]) => ` ${key}="${val}"`)
+        .join('')
+    : ''
+
+  return `<img src="${src}" alt="${alt}"${loadingAttr}${otherAttrs}>`
+}
+
 export default defineConfig({
   vite: {
     optimizeDeps: {
@@ -46,6 +70,8 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       md.use(taskLists)
+      // Переопределяем рендерер изображений для lazy loading
+      md.renderer.rules.image = imageRender
     },
     container: {
       infoLabel: 'Примечание',
