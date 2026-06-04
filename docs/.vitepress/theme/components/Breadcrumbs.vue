@@ -1,5 +1,5 @@
 <template>
-  <nav class="breadcrumbs" aria-label="Breadcrumb">
+  <nav v-if="crumbs.length >= 2" class="breadcrumbs" aria-label="Breadcrumb">
     <ol ref="olRef">
       <li class="home-item">
         <a href="/" class="home-link" aria-label="Главная">
