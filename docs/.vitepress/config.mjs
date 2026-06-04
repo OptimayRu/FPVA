@@ -43,6 +43,12 @@ export default defineConfig({
     },
   },
 
+  build: {
+    rollupOptions: {
+      external: [/\/\.webp$/],
+    },
+  },
+
   lang: 'ru-RU',
   title: 'FPVАвиация',
   description: 'Всё, что касается FPV',
