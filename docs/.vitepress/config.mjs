@@ -28,7 +28,10 @@ export default defineConfig({
   },
 
   head: [
-    ['link', { rel: 'icon', href: 'https://fpva.ru/fpva-fav.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'icon', href: '/favicon.ico', sizes: '48x48' }],
+    ['link', { rel: 'icon', href: '/fpva-fav.svg', type: 'image/svg+xml' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicon-180.png' }],
+    ['link', { rel: 'manifest', href: '/manifest.json' }],
     ['link', { rel: 'preload', href: '/fpva-logo2.svg', as: 'image' }],
     ['link', { rel: 'preconnect', href: 'https://mc.yandex.ru' }],
     ['meta', { property: 'og:type', content: 'website' }],
