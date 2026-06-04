@@ -22,8 +22,7 @@ const imageRender = (tokens, idx, options, env, self) => {
         .join('')
     : ''
 
-  const webpSrc = src.replace(/\.(png|jpg|jpeg)$/i, '.webp')
-  return `<img src="${webpSrc}" alt="${alt}"${loadingAttr}${otherAttrs}>`
+  return `<img src="${src}" alt="${alt}"${loadingAttr}${otherAttrs}>`
 }
 
 export default defineConfig({
@@ -40,12 +39,6 @@ export default defineConfig({
         '@nolebase/vitepress-plugin-enhanced-readabilities',
         '@nolebase/ui',
       ],
-    },
-  },
-
-  build: {
-    rollupOptions: {
-      external: [/\/\.webp$/],
     },
   },
 
