@@ -41,11 +41,7 @@ export default defineConfig({
         '@nolebase/ui',
       ],
     },
-    build: {
-      rollupOptions: {
-        external: [/\/\.webp$/],
-      },
-    },
+    assetsInclude: ['**/*.webp'],
   },
 
   lang: 'ru-RU',
