@@ -22,8 +22,7 @@ const imageRender = (tokens, idx, options, env, self) => {
         .join('')
     : ''
 
-  const webpSrc = src.replace(/\.(jpg|jpeg|png)$/i, '.webp')
-  return `<img src="${webpSrc}" alt="${alt}"${loadingAttr}${otherAttrs}>`
+  return `<img src="${src}" alt="${alt}"${loadingAttr}${otherAttrs}>`
 }
 
 export default defineConfig({
@@ -41,7 +40,6 @@ export default defineConfig({
         '@nolebase/ui',
       ],
     },
-    assetsInclude: ['**/*.webp'],
   },
 
   lang: 'ru-RU',
