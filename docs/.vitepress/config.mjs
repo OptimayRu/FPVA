@@ -91,8 +91,8 @@ export default defineConfig({
     },
 
     docFooter: {
-      prev: 'Предыдущая страница',
-      next: 'Следующая страница'
+      prev: 'Предыдущая',
+      next: 'Следующая'
     },
     outline: {
       label: 'Содержание страницы'

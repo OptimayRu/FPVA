@@ -292,3 +292,6 @@ html.dark .VPFeature .icon {
   content: "Перейти к содержанию";
   font-size: 14px;
   visibility: visible;
+}
+
+/* Пагинация обрабатывается через JS в index.js */

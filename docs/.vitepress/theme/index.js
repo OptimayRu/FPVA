@@ -114,6 +114,18 @@ export default {
               
               :root {
                 transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+              }
+
+              @media (min-width: 640px) {
+                nav.prev-next[data-v-58acef77] {
+                  display: flex !important;
+                  flex-direction: row !important;
+                  gap: 1rem !important;
+                  grid-template-columns: none !important;
+                }
+                nav.prev-next[data-v-58acef77] div.pager[data-v-58acef77] {
+                  flex: 1 !important;
+                }
               }`
       document.head.appendChild(style)
 
@@ -156,6 +168,32 @@ export default {
       }
 
 
+
+      // Принудительно применяем flex-стили для пагинации (в одну строку)
+      const applyPagerStyles = () => {
+        const prevNext = document.querySelector('nav.prev-next');
+        if (!prevNext) return;
+
+        // Проверяем, не исправил ли уже VitePress эту проблему в апстриме
+        const computed = getComputedStyle(prevNext);
+        if (computed.gridTemplateColumns && computed.gridTemplateColumns !== 'none' && computed.gridTemplateColumns !== 'initial') {
+          // Апстрим уже применяет две колонки — наш фикс больше не нужен
+          console.warn('PAGER_FIX: VitePress уже исправил пагинацию. Удалите блок applyPagerStyles из index.js.');
+          return;
+        }
+
+        prevNext.style.setProperty('display', 'flex', 'important');
+        prevNext.style.setProperty('flex-direction', 'row', 'important');
+        prevNext.style.setProperty('gap', '1rem', 'important');
+        prevNext.style.setProperty('grid-template-columns', 'none', 'important');
+        prevNext.querySelectorAll('div.pager').forEach(p => {
+          p.style.setProperty('flex', '1', 'important');
+        });
+      };
+
+      setTimeout(applyPagerStyles, 100);
+      setTimeout(applyPagerStyles, 500);
+      window.addEventListener('resize', applyPagerStyles);
 
       // Наблюдаем за появлением поиска и меняем placeholder
       const searchObserver = new MutationObserver(() => {
